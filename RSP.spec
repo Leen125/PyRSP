@@ -2,11 +2,11 @@
 
 
 a = Analysis(
-    ['pyqt.py'],
+    ['RSP.py'],
     pathex=[],
     binaries=[],
-    datas=[],
-    hiddenimports=[],
+    datas=[('icon.png', '.')],
+    hiddenimports=['pyttsx3.drivers', 'pyttsx3.drivers.sapi5'],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -21,7 +21,7 @@ exe = EXE(
     a.scripts,
     [],
     exclude_binaries=True,
-    name='pyqt',
+    name='RSP',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -41,5 +41,5 @@ coll = COLLECT(
     strip=False,
     upx=True,
     upx_exclude=[],
-    name='pyqt',
+    name='RSP',
 )
